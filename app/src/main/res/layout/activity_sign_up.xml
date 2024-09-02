@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <ImageView
+        android:id="@+id/imgTop"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_marginStart="@dimen/_minus10sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_ellipse_seven"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        style="@style/RedhatDisplay24Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:lineSpacingMultiplier="0.6"
+        android:text="Selamat\nBergabung!"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/imgTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/RedhatDisplay16Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:text="Senang bertemu denganmu"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcome" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutUsername"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgTop">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtUserName"
+            style="@style/RedhatDisplay12Regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <include
+        android:id="@+id/layoutEmail"
+        layout="@layout/view_form_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutUsername" />
+
+    <include
+        android:id="@+id/layoutPassword"
+        layout="@layout/view_form_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutEmail" />
+
+    <include
+        android:id="@+id/layoutConfirmPassword"
+        layout="@layout/view_form_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutPassword" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        style="@style/RedhatDisplay12Bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:backgroundTint="@color/red"
+        android:text="Daftar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutConfirmPassword" />
+
+    <include
+        android:id="@+id/layoutTextAction"
+        layout="@layout/view_text_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+    <ImageView
+        android:id="@+id/imgGroup"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:src="@drawable/ic_group"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/layoutErrorValidation"
+        layout="@layout/view_validation_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/imgGroup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/layoutSuccessValidation"
+        layout="@layout/view_validation_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/imgGroup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

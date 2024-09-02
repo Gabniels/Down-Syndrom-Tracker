@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <ImageView
+        android:id="@+id/imgTop"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_marginStart="@dimen/_minus10sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_ellipse_seven"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        style="@style/RedhatDisplay24Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:lineSpacingMultiplier="0.6"
+        android:text="Selamat Datang\nKembali!"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/imgTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/RedhatDisplay16Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:text="Senang bertemu denganmu"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcome" />
+
+    <include
+        android:id="@+id/layoutEmail"
+        layout="@layout/view_form_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgTop" />
+
+    <include
+        android:id="@+id/layoutPassword"
+        layout="@layout/view_form_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutEmail" />
+
+    <TextView
+        android:id="@+id/txtForgetPassword"
+        style="@style/RedhatDisplay14Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Lupa password?"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/layoutPassword"
+        app:layout_constraintTop_toBottomOf="@id/layoutPassword" />
+
+    <Button
+        android:id="@+id/btnSignIn"
+        style="@style/RedhatDisplay12Bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="@color/red"
+        android:text="Masuk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtForgetPassword" />
+
+    <include
+        android:id="@+id/layoutTextAction"
+        layout="@layout/view_text_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+    <TextView
+        android:id="@+id/txtOther"
+        style="@style/RedhatDisplay10Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:text="Atau Lanjut Dengan"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutTextAction" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@id/txtOther"
+        app:layout_constraintEnd_toStartOf="@id/txtOther"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtOther" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="@id/txtOther"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtOther"
+        app:layout_constraintTop_toTopOf="@id/txtOther" />
+
+    <LinearLayout
+        android:id="@+id/btnGmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/background_button"
+        android:backgroundTint="@color/gray"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtOther">
+
+        <ImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_google" />
+
+        <TextView
+            style="@style/RedhatDisplay12Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Login dengan Google" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_minus10sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background_ellipse_eight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgGroup"
+        android:layout_width="@dimen/_64sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:src="@drawable/ic_group"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/layoutErrorValidation"
+        layout="@layout/view_validation_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/imgGroup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/layoutSuccessValidation"
+        layout="@layout/view_validation_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/imgGroup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

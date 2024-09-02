@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "799991395919",
+    "project_id": "down-syndrom-tracker",
+    "storage_bucket": "down-syndrom-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799991395919:android:b593f8bc6267cdaf2fdc3a",
+        "android_client_info": {
+          "package_name": "net.skripsi.downsyndromtracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIxLKrg7kzF4kIcfVS_TJCFWuVFACmE94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

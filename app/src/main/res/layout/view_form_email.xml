@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ThemeOverlay.Material3.AutoCompleteTextView.FilledBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edtEmail"
+        style="@style/RedhatDisplay12Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+</com.google.android.material.textfield.TextInputLayout>
